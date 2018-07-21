@@ -191,6 +191,5 @@ int main(int argc, char** argv)
 
 ## 결과사진
 
-![result1](C:\Users\piaka\OneDrive\사진\result1.PNG)
-
-![result2](C:\Users\piaka\OneDrive\사진\result2.PNG)
+![result1](https://user-images.githubusercontent.com/37570093/43032345-6266909a-8cef-11e8-932f-33537488dae1.PNG)
+![result2](https://user-images.githubusercontent.com/37570093/43032354-784fc944-8cef-11e8-992b-75a9c62cc099.PNG)
