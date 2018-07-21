@@ -58,26 +58,28 @@ void connect_mobile()
 		if(!strcmp(inputTemp[0],"motor"))
 		{
 			if(pthread_create(&id_motor,NULL,execute_motor,NULL) < 0)
-               {
+             		{
         			perror("motor thread create error : ");
-               }
-                          pthread_detach(id_motor);
+               		}
+                        pthread_detach(id_motor);
+			
 		}elseif(!strcmp(inputTemp[0],"music"))
 		{
 			if(isMusicStart)
 			{
 				isMusicStart = 0;
-				 if(pthread_create(&id_hawlMusic,NULL,execute_HawlMusic,NULL) < 0)
-				 {
+				if(pthread_create(&id_hawlMusic,NULL,execute_HawlMusic,NULL) < 0)
+				{
 					perror("music thread create error : ");
-				 }
-				 pthread_detach(id_hawlMusic);
+				}
+				pthread_detach(id_hawlMusic);
 				}
 				else
 				{
 					printf("Music is alreay start\n");
 					system("kill $(pgrep omxplayer)");
 				}
+			}
 		}
 		elseif(!strcmp(inputTemp[0],"update"))//정보 갱신하기
 		{
