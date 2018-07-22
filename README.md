@@ -181,10 +181,8 @@ int main(int argc, char** argv)
     pushServer_addr.sin_family = AF_INET;
     pushServer_addr.sin_port = htons(80);
     inet_pton(AF_INET, str, &pushServer_addr.sin_addr);
- 
-    printf("connection...\n");
+
     connect(pushServer_sock, (sockaddr*) & pushServer_addr, sizeof(pushServer_addr));
-    printf("process http...\n---------------------------\n%s\n----------------------\n",poststr);
     process_http(pushServer_sock, hostname, page, poststr);
     close(pushServer_sock);
     return 0;
